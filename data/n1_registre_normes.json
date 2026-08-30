@@ -1,0 +1,106 @@
+{
+  "registre": "N1-DIRECTIONS-NORMALISATION",
+  "protocole": "NORM-REG-1.0 (gelé) — schéma hérité de REG-FR-1.0 (registre A4 du corpus)",
+  "dépôt": "noetic-normes (privé — prospection avant dépôts externes)",
+  "n_entrées": 6,
+  "par_statut": {
+    "fermée": 0,
+    "en-cours": 0,
+    "partielle": 0,
+    "ouverte": 6,
+    "réfutée": 0
+  },
+  "par_type": {
+    "norme": 2,
+    "spécification": 2,
+    "pont": 2
+  },
+  "entrées": [
+    {
+      "id": "D1-DCC-VERDICT",
+      "type": "pont",
+      "énoncé": "Étendre le Digital Calibration Certificate (PTB/DAkkS) d'un champ « verdict algorithmique » : protocole gelé, domaine mesuré, falsifieur exécutable, stabilité Σ, empreinte SHA-256 — la chaîne ASH → M̂ publiée comme un DCC étendu auto-émis et rejouable",
+      "protocole": "NORM-MACH-1.0",
+      "statut": "ouverte",
+      "coût_de_fermeture_exact": "produire le cas complet (DCC étendu de la chaîne ASH → M̂, rejouable) + contact avec la communauté métrologie légale (PTB/DAkkS ou délégation française)",
+      "artefacts": {
+        "fondation": "docs/note-directions-normes.md §D1",
+        "gabarit": "doc technique chaîne ASH → M̂ (V1–V6, corpus)"
+      },
+      "falsifieur": "si le cas DCC étendu publié n'est rejoué par aucun tiers en six mois → la voie est réfutée telle quelle (publié) ; si le format DCC ne peut pas porter un champ verdict → publié, direction refermée vers D2/D4",
+      "sha256_entrée": "5891b898203c283c5c1f20ea39c4cd97d9c2ce7476d4bf0becc1bfdbcfd6f721"
+    },
+    {
+      "id": "D2-CWA-PREUVE-EXECUTABLE",
+      "type": "norme",
+      "énoncé": "CEN Workshop Agreement : « Exécutable evidence for high-risk AI performance claims » — figer le format de preuve (art. 15 AI Act : robustesse) avant les normes harmonisées, avec le corpus comme cas de référence vivant (20 frontières, falsifieurs exécutables)",
+      "protocole": "NORM-MACH-1.0",
+      "statut": "ouverte",
+      "coût_de_fermeture_exact": "rédiger la proposition d'atelier (scope, livrables, calendrier) et la déposer — ouverte à tout acteur, y compris petits",
+      "artefacts": {
+        "fondation": "docs/note-directions-normes.md §D2",
+        "cas_de_référence": "github.com/PORTEMANN/noetic-machine-complete"
+      },
+      "falsifieur": "si l'atelier n'aboutit pas ou si la proposition est refusée → publié tel quel (B3-FAIL du plan) ; deux refus consécutifs ferment la voie",
+      "sha256_entrée": "b601e6355930647a9236f0af0dcabda78cd9a99ae01450bcf3f0149f570e4791"
+    },
+    {
+      "id": "D3-CLAUSES-PREN",
+      "type": "norme",
+      "énoncé": "Entrer dans les projets prEN CEN-CENELEC JTC 21 (délégation AFNOR) avec deux clauses déjà exécutées dans le corpus : (i) la stabilité par perturbation du protocole d'évaluation comme exigence de robustesse ; (ii) le registre de limites mesurées comme structure de la documentation annexe IV",
+      "protocole": "NORM-MACH-1.0",
+      "statut": "ouverte",
+      "coût_de_fermeture_exact": "formuler les deux clauses en langage normatif + dossier de preuve (A1/A1b exécutés) + prise de contact délégation nationale",
+      "artefacts": {
+        "fondation": "docs/note-directions-normes.md §D3",
+        "preuve": "a1_batterie_perturbation.py, a1b_batterie_retroactive.py (corpus, verdicts figés)"
+      },
+      "falsifieur": "si les deux clauses sont rejetées deux fois → la voie est documentée comme fermée, pas persévérée en silence",
+      "sha256_entrée": "6f3abcf835ae79be958e9bb6f2a30f1a78d39c3d7a147e210231d64d5b8fbfaf"
+    },
+    {
+      "id": "D4-OIML-INSTRUMENT-VERDICT",
+      "type": "pont",
+      "énoncé": "Proposer à OIML/WELMEC la catégorie « instrument à verdict algorithmique » : fiche de domaine mesuré obligatoire (résolution effective, train minimal d'événements, stabilité) sur le gabarit V1–V6 du document technique ASH → M̂",
+      "protocole": "NORM-MACH-1.0",
+      "statut": "ouverte",
+      "coût_de_fermeture_exact": "adapter le gabarit V1–V6 en fiche d'instrument + l'adosser au cas D1 (DCC étendu) avant de contacter OIML/WELMEC",
+      "artefacts": {
+        "fondation": "docs/note-directions-normes.md §D4",
+        "gabarit": "doc technique chaîne ASH → M̂ (LaTeX, corpus)"
+      },
+      "falsifieur": "si le canal exige une représentation formelle inaccessible → documenté, replis vers D1 seul ; toute objection technique est publiée",
+      "sha256_entrée": "77865566158673b9131af67c3a596c11f59823b25fa9c483d26df305c55fe8c3"
+    },
+    {
+      "id": "D5-SPEC-ASH-MACH",
+      "type": "spécification",
+      "énoncé": "Publier la spécification ouverte ASH-MACH : les protocoles gelés du corpus présentés comme une mini-norme (définitions, conditions de validité, essais, falsifieurs, format de registre) + safety case pilote avec certificat de minimalité calculé (forme M2e)",
+      "protocole": "NORM-MACH-1.0",
+      "statut": "ouverte",
+      "coût_de_fermeture_exact": "rédiger la spécification (format norme : exigences SHALL, essais rejouables) + exécuter le safety case pilote de bout en bout",
+      "artefacts": {
+        "fondation": "docs/note-directions-normes.md §D5",
+        "certificat_modèle": "m2e_copie_tri_verdict.json (corpus)"
+      },
+      "falsifieur": "si la spécification publiée n'est rejouée par personne en six mois → la voie D5 est réfutée telle quelle (publié)",
+      "sha256_entrée": "91c144d2795d7dab412fd86e070ba786a08ab12be435fe05efa1f05c757f9c54"
+    },
+    {
+      "id": "D6-TABLE-CONFORMITE-AIACT",
+      "type": "spécification",
+      "énoncé": "Publier la table de conformité AI Act du corpus : artefacts mappés sur les art. 9–15 (registre des frontières = gestion des risques ; D figées = gouvernance des données ; notes SHA = documentation ; PERT-BATT = robustesse ; le verdict qui refuse quand Σ chute = supervision humaine effective)",
+      "protocole": "NORM-MACH-1.0",
+      "statut": "ouverte",
+      "coût_de_fermeture_exact": "produire la table article par article, avec pour chacun l'artefact du corpus qui le couvre et les écarts publiés",
+      "artefacts": {
+        "fondation": "docs/note-directions-normes.md §D6",
+        "cadre": "règlement (UE) 2024/1689 modifié par (UE) 2026/1744"
+      },
+      "falsifieur": "tout écart découvert entre la table et les exigences finales des normes harmonisées est publié en addendum — jamais corrigé en silence",
+      "sha256_entrée": "1adc1a8e50736a535571d84497c07c8912eec0eed047fef49e30f2b6b050a584"
+    }
+  ],
+  "sha256_registre": "dc1918f14933c39b66535409cb7b313d588a36b0b7a0144366c3390c6a1e6888",
+  "sha256_script": "f34f73d264599b5636880ebeb6987d0c3359f9d6a8b7c7ee687c2dd6436d8062"
+}
