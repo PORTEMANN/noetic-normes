@@ -4,16 +4,16 @@
   "dépôt": "noetic-normes (privé — prospection avant dépôts externes)",
   "n_entrées": 6,
   "par_statut": {
-    "fermée": 0,
-    "en-cours": 0,
+    "ouverte": 4,
+    "en-cours": 1,
     "partielle": 0,
-    "ouverte": 6,
-    "réfutée": 0
+    "réfutée": 0,
+    "fermée": 1
   },
   "par_type": {
-    "norme": 2,
     "spécification": 2,
-    "pont": 2
+    "pont": 2,
+    "norme": 2
   },
   "entrées": [
     {
@@ -77,30 +77,49 @@
       "type": "spécification",
       "énoncé": "Publier la spécification ouverte ASH-MACH : les protocoles gelés du corpus présentés comme une mini-norme (définitions, conditions de validité, essais, falsifieurs, format de registre) + safety case pilote avec certificat de minimalité calculé (forme M2e)",
       "protocole": "NORM-MACH-1.0",
-      "statut": "ouverte",
+      "statut": "en-cours",
       "coût_de_fermeture_exact": "rédiger la spécification (format norme : exigences SHALL, essais rejouables) + exécuter le safety case pilote de bout en bout",
       "artefacts": {
         "fondation": "docs/note-directions-normes.md §D5",
         "certificat_modèle": "m2e_copie_tri_verdict.json (corpus)"
       },
       "falsifieur": "si la spécification publiée n'est rejouée par personne en six mois → la voie D5 est réfutée telle quelle (publié)",
-      "sha256_entrée": "91c144d2795d7dab412fd86e070ba786a08ab12be435fe05efa1f05c757f9c54"
+      "addenda": [
+        {
+          "date": "2026-08-31",
+          "action": "production livrée — spécification rédigée au format norme + safety case pilote exécuté (certificat de minimalité de la copie)",
+          "artefacts": [
+            "specs/ash-mach-0.1.md"
+          ],
+          "note": "fenêtre de rejeu par des tiers ouverte jusqu'au 2027-02-28 — le falsifieur reste armé : aucune rejouabilité tierce sous six mois réfute la voie"
+        }
+      ],
+      "sha256_entrée": "65df651ce188a5537fd1189fe30d2a2911eef17d87689d36a97f35078261268a"
     },
     {
       "id": "D6-TABLE-CONFORMITE-AIACT",
       "type": "spécification",
       "énoncé": "Publier la table de conformité AI Act du corpus : artefacts mappés sur les art. 9–15 (registre des frontières = gestion des risques ; D figées = gouvernance des données ; notes SHA = documentation ; PERT-BATT = robustesse ; le verdict qui refuse quand Σ chute = supervision humaine effective)",
       "protocole": "NORM-MACH-1.0",
-      "statut": "ouverte",
+      "statut": "fermée",
       "coût_de_fermeture_exact": "produire la table article par article, avec pour chacun l'artefact du corpus qui le couvre et les écarts publiés",
       "artefacts": {
         "fondation": "docs/note-directions-normes.md §D6",
         "cadre": "règlement (UE) 2024/1689 modifié par (UE) 2026/1744"
       },
       "falsifieur": "tout écart découvert entre la table et les exigences finales des normes harmonisées est publié en addendum — jamais corrigé en silence",
-      "sha256_entrée": "1adc1a8e50736a535571d84497c07c8912eec0eed047fef49e30f2b6b050a584"
+      "addenda": [
+        {
+          "date": "2026-08-31",
+          "action": "production livrée — table v1.0 art. 9–15 avec écarts publiés (QMS, plan de surveillance, procédure de supervision humaine)",
+          "artefacts": [
+            "docs/table-conformite-ai-act.md"
+          ]
+        }
+      ],
+      "sha256_entrée": "1e51c9671f24abc819939c5031e15feadc03f1860e3d08a86089730eede0ae74"
     }
   ],
-  "sha256_registre": "dc1918f14933c39b66535409cb7b313d588a36b0b7a0144366c3390c6a1e6888",
-  "sha256_script": "f34f73d264599b5636880ebeb6987d0c3359f9d6a8b7c7ee687c2dd6436d8062"
+  "sha256_registre": "cd7f8e668321c158157b0213e51c9ab595f0731b777486590f5e002463c8ac0b",
+  "sha256_script": "8c6f9b81ca9dc5ab6aad83f7710294a4a6add30d71cf6968b89bb097fc5efea7"
 }
