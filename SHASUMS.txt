@@ -1,8 +1,8 @@
 # Empreintes SHA-256 — noetic-normes (NORM-REG-1.0)
 # généré le 31 août 2026 — GitHub = source de vérité
+# note : docs/note-directions-normes.docx (binaire) livré hors dépôt
 
 29a4233f904f35ede58b172e97d99817aabfc3724994e879cdd9c5d1321efb89  README.md
 f34f73d264599b5636880ebeb6987d0c3359f9d6a8b7c7ee687c2dd6436d8062  src/n1_registre_normes.py
-08e72f23587271f3ceb99a2268901f70393c30a48259d9e02763c09211325086  data/n1_registre_normes.json
+7092ec0c0db4d8f036dd1fa555d66775461fc8c66a7f1ebc3f57610df5e86aff  data/n1_registre_normes.json
 8514ac9e1b4946ab45bc74705fbf66bed107987ae77270599dc0395b7c48e22f  docs/note-directions-normes.md
-8494292d1de7b6517e9e7368b6398cd4228cb5b80b45273dd8367b3fea4f8c9e  docs/note-directions-normes.docx
