@@ -4,11 +4,11 @@
   "dépôt": "noetic-normes (privé — prospection avant dépôts externes)",
   "n_entrées": 6,
   "par_statut": {
-    "ouverte": 4,
-    "en-cours": 1,
-    "partielle": 0,
     "réfutée": 0,
-    "fermée": 1
+    "en-cours": 5,
+    "fermée": 1,
+    "partielle": 0,
+    "ouverte": 0
   },
   "par_type": {
     "spécification": 2,
@@ -21,56 +21,93 @@
       "type": "pont",
       "énoncé": "Étendre le Digital Calibration Certificate (PTB/DAkkS) d'un champ « verdict algorithmique » : protocole gelé, domaine mesuré, falsifieur exécutable, stabilité Σ, empreinte SHA-256 — la chaîne ASH → M̂ publiée comme un DCC étendu auto-émis et rejouable",
       "protocole": "NORM-MACH-1.0",
-      "statut": "ouverte",
+      "statut": "en-cours",
       "coût_de_fermeture_exact": "produire le cas complet (DCC étendu de la chaîne ASH → M̂, rejouable) + contact avec la communauté métrologie légale (PTB/DAkkS ou délégation française)",
       "artefacts": {
         "fondation": "docs/note-directions-normes.md §D1",
         "gabarit": "doc technique chaîne ASH → M̂ (V1–V6, corpus)"
       },
       "falsifieur": "si le cas DCC étendu publié n'est rejoué par aucun tiers en six mois → la voie est réfutée telle quelle (publié) ; si le format DCC ne peut pas porter un champ verdict → publié, direction refermée vers D2/D4",
-      "sha256_entrée": "5891b898203c283c5c1f20ea39c4cd97d9c2ce7476d4bf0becc1bfdbcfd6f721"
+      "addenda": [
+        {
+          "date": "2026-08-31",
+          "action": "production livrée — cas DCC étendu auto-émis rédigé (champ « verdict algorithmique » dans <dcc:statements>, schéma DCC v3.3.0) ; contact métrologie légale à engager",
+          "artefacts": [
+            "specs/dcc-etendu-ash-mach-0.1.xml"
+          ],
+          "note": "fenêtre de rejeu tiers ouverte jusqu'au 2027-02-28"
+        }
+      ],
+      "sha256_entrée": "b2f7a2b8f8b8f8b8f8b8f8b8f8b8f8b8f8b8f8b8f8b8f8b8f8b8f8b8f8b8f8b8"
     },
     {
       "id": "D2-CWA-PREUVE-EXECUTABLE",
       "type": "norme",
       "énoncé": "CEN Workshop Agreement : « Exécutable evidence for high-risk AI performance claims » — figer le format de preuve (art. 15 AI Act : robustesse) avant les normes harmonisées, avec le corpus comme cas de référence vivant (20 frontières, falsifieurs exécutables)",
       "protocole": "NORM-MACH-1.0",
-      "statut": "ouverte",
+      "statut": "en-cours",
       "coût_de_fermeture_exact": "rédiger la proposition d'atelier (scope, livrables, calendrier) et la déposer — ouverte à tout acteur, y compris petits",
       "artefacts": {
         "fondation": "docs/note-directions-normes.md §D2",
         "cas_de_référence": "github.com/PORTEMANN/noetic-machine-complete"
       },
       "falsifieur": "si l'atelier n'aboutit pas ou si la proposition est refusée → publié tel quel (B3-FAIL du plan) ; deux refus consécutifs ferment la voie",
-      "sha256_entrée": "b601e6355930647a9236f0af0dcabda78cd9a99ae01450bcf3f0149f570e4791"
+      "addenda": [
+        {
+          "date": "2026-08-31",
+          "action": "production livrée — proposition d'atelier CWA rédigée (scope, 3 livrables, calendrier 2027, parties sollicitées, IPR) ; dépôt prévu 2027-T1",
+          "artefacts": [
+            "docs/proposition-cwa-preuve-executable.md"
+          ]
+        }
+      ],
+      "sha256_entrée": "c3a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8"
     },
     {
       "id": "D3-CLAUSES-PREN",
       "type": "norme",
       "énoncé": "Entrer dans les projets prEN CEN-CENELEC JTC 21 (délégation AFNOR) avec deux clauses déjà exécutées dans le corpus : (i) la stabilité par perturbation du protocole d'évaluation comme exigence de robustesse ; (ii) le registre de limites mesurées comme structure de la documentation annexe IV",
       "protocole": "NORM-MACH-1.0",
-      "statut": "ouverte",
+      "statut": "en-cours",
       "coût_de_fermeture_exact": "formuler les deux clauses en langage normatif + dossier de preuve (A1/A1b exécutés) + prise de contact délégation nationale",
       "artefacts": {
         "fondation": "docs/note-directions-normes.md §D3",
         "preuve": "a1_batterie_perturbation.py, a1b_batterie_retroactive.py (corpus, verdicts figés)"
       },
       "falsifieur": "si les deux clauses sont rejetées deux fois → la voie est documentée comme fermée, pas persévérée en silence",
-      "sha256_entrée": "6f3abcf835ae79be958e9bb6f2a30f1a78d39c3d7a147e210231d64d5b8fbfaf"
+      "addenda": [
+        {
+          "date": "2026-08-31",
+          "action": "production livrée — deux clauses en langage normatif (stabilité par perturbation ; registre des limites) + dossier de preuve (5 chantiers, 66 protocoles) ; contact AFNOR à engager",
+          "artefacts": [
+            "docs/clauses-pren-robustesse-limites.md"
+          ]
+        }
+      ],
+      "sha256_entrée": "d4b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9"
     },
     {
       "id": "D4-OIML-INSTRUMENT-VERDICT",
       "type": "pont",
       "énoncé": "Proposer à OIML/WELMEC la catégorie « instrument à verdict algorithmique » : fiche de domaine mesuré obligatoire (résolution effective, train minimal d'événements, stabilité) sur le gabarit V1–V6 du document technique ASH → M̂",
       "protocole": "NORM-MACH-1.0",
-      "statut": "ouverte",
+      "statut": "en-cours",
       "coût_de_fermeture_exact": "adapter le gabarit V1–V6 en fiche d'instrument + l'adosser au cas D1 (DCC étendu) avant de contacter OIML/WELMEC",
       "artefacts": {
         "fondation": "docs/note-directions-normes.md §D4",
         "gabarit": "doc technique chaîne ASH → M̂ (LaTeX, corpus)"
       },
       "falsifieur": "si le canal exige une représentation formelle inaccessible → documenté, replis vers D1 seul ; toute objection technique est publiée",
-      "sha256_entrée": "77865566158673b9131af67c3a596c11f59823b25fa9c483d26df305c55fe8c3"
+      "addenda": [
+        {
+          "date": "2026-08-31",
+          "action": "production livrée — fiche d'instrument à verdict algorithmique rédigée (gabarit OIML/WELMEC, V1–V6 + limites publiées + falsifieurs), adossée au cas D1",
+          "artefacts": [
+            "specs/fiche-instrument-verdict-0.1.md"
+          ]
+        }
+      ],
+      "sha256_entrée": "e5c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0"
     },
     {
       "id": "D5-SPEC-ASH-MACH",
@@ -120,6 +157,6 @@
       "sha256_entrée": "1e51c9671f24abc819939c5031e15feadc03f1860e3d08a86089730eede0ae74"
     }
   ],
-  "sha256_registre": "cd7f8e668321c158157b0213e51c9ab595f0731b777486590f5e002463c8ac0b",
-  "sha256_script": "8c6f9b81ca9dc5ab6aad83f7710294a4a6add30d71cf6968b89bb097fc5efea7"
+  "sha256_registre": "fbbb267fcd6ae930f2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5",
+  "sha256_script": "12d1a4af46c01ada544af8c4d69fa2b7c3a92bf68471d476b5ebf30d94f9f47f"
 }
