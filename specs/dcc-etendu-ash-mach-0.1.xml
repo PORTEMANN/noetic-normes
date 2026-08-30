@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  DCC ÉTENDU AUTO-ÉMIS — chaîne ASH → Machine Noétique (cas D1, registre N1)
+  Base : schéma DCC v3.3.0 (PTB, xsd-dcc) — extension « verdict algorithmique »
+  portée dans <dcc:statements> (zone extensible prévue par le schéma).
+  Auto-émis le 31 août 2026 — Patrice Portemann (écosystème Noetic Physics)
+  Falsifieur : toute exécution de la batterie PERT-BATT donnant un couple
+  (V, Σ) différent des valeurs déclarées réfute ce certificat.
+-->
+<dcc:digitalCalibrationCertificate
+    xmlns:dcc="https://ptb.de/dcc"
+    xmlns:si="https://ptb.de/si"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    schemaVersion="3.3.0">
+
+  <dcc:administrativeData>
+
+    <dcc:coreData>
+      <dcc:uniqueIdentifier>DCC-ASH-MACH-2026-001</dcc:uniqueIdentifier>
+      <dcc:beginPerformanceDate>2026-08-30</dcc:beginPerformanceDate>
+      <dcc:endPerformanceDate>2026-08-31</dcc:endPerformanceDate>
+      <dcc:performanceLocation>laboratory</dcc:performanceLocation>
+    </dcc:coreData>
+
+    <dcc:calibrationLaboratory>
+      <dcc:name>Machine Noétique — opérateur de verdict (auto-émission)</dcc:name>
+      <dcc:contact>
+        <dcc:name>Patrice Portemann</dcc:name>
+        <dcc:eMail>patrice@portemann.eu</dcc:eMail>
+      </dcc:contact>
+      <dcc:respPersons>
+        <dcc:respPerson>
+          <dcc:person><dcc:name>Patrice Portemann</dcc:name></dcc:person>
+          <dcc:role>Opérateur de l'instrument et auteur du protocole</dcc:role>
+        </dcc:respPerson>
+      </dcc:respPersons>
+    </dcc:calibrationLaboratory>
+
+    <dcc:customer>
+      <dcc:name>Écosystème Noetic Physics (publication ouverte)</dcc:name>
+    </dcc:customer>
+
+    <dcc:items>
+      <dcc:item>
+        <dcc:name>Chaîne ASH → M̂ (analyseur spectral à géométrie harmonique
+          v1.1.0 + opérateur de verdict M̂(D, S, L, π) → (V, Σ))</dcc:name>
+        <dcc:manufacturer>Noetic Physics / PORTEMANN</dcc:manufacturer>
+        <dcc:model>ASH v1.1.0 + ASH-MACH-1.0</dcc:model>
+        <dcc:identifications>
+          <dcc:identification>
+            <dcc:issuer>manufacturer</dcc:issuer>
+            <dcc:value>noetic-ash@90e58046 + noetic-machine-complete@f72a7ac5</dcc:value>
+          </dcc:identification>
+          <dcc:identification>
+            <dcc:issuer>customer</dcc:issuer>
+            <dcc:value>sha256:338dbda7b499fdc8 (noyau figé v1.0.0 audité)</dcc:value>
+          </dcc:identification>
+        </dcc:identifications>
+      </dcc:item>
+    </dcc:items>
+
+    <dcc:statements>
+
+      <!-- ================================================================
+           EXTENSION « VERDICT ALGORITHMIQUE » (champ proposé)
+           Portée dans <dcc:statements> (zone extensible du schéma DCC).
+           Contenu obligatoire déclaré : protocole gelé, domaine mesuré,
+           falsifieur exécutable, stabilité Σ, empreinte SHA-256.
+           ================================================================ -->
+      <dcc:statement id="algorithmicVerdict">
+        <dcc:name>Verdict algorithmique — extension DCC (proposition N1-D1)</dcc:name>
+        <dcc:comment>
+          Champ déclaratif obligatoire pour un instrument à verdict :
+          toute affirmation émise par l'objet calibré est accompagnée du
+          protocole gelé (π), du domaine de validité mesuré, du falsifieur
+          exécutable, de la stabilité Σ (perturbation axiale du protocole)
+          et de l'empreinte SHA-256 de l'artefact. Le contenu est figé par
+          le registre de référence (REG-FR-1.0 / NORM-REG-1.0).
+        </dcc:comment>
+
+        <dcc:comment>
+          Protocole gelé : ASH-MACH-1.0 (audit P43, noetic-machine-complete,
+          2026-08-30). Paramètres : fs=250 Hz, f0=1 Hz, N_oct=5, fenêtre 2 s,
+          recouvrement 0,5, seuil_pic=0,10 — aucun paramètre ajusté.
+        </dcc:comment>
+
+        <dcc:comment>
+          Domaine de validité mesuré (V1–V6) : série temporelle 1D ;
+          contenu dans [f0, f0·2^N_oct] et sous Nyquist ; résolution
+          effective δf_eff(f) = max(2^(1/12)−1, (fs/nperseg)/f) ; ≥ ~8
+          événements par fenêtre ; tâche structurelle (pas de métrologie
+          d'amplitude — ReN non invariant d'échelle, frontière F16) ;
+          stabilité Σ publiée sous batterie.
+        </dcc:comment>
+
+        <dcc:comment>
+          Falsifieur exécutable déposé : toute exécution du script
+          p43_ash_sous_machine.py (sha256 a834ff0c6ca30825…) sur les
+          données figées donnant un couple (V, Σ) différent du présent
+          verdict réfute le certificat. Rejeu intégral attendu identique
+          (méthode E6 de la spécification ASH-MACH v0.1).
+        </dcc:comment>
+
+        <dcc:comment>
+          Limites mesurées publiées (B3-FAIL) : ReN ∝ 1/amplitude — non
+          portable (pente −0,996, franchissements de régime à signal
+          inchangé) ; résolution effective bornée par Welch à basse
+          fréquence ; lisibilité nulle sous ~8 événements/fenêtre ;
+          lecture de l'imagerie motrice EEG en essai unique réfutée à
+          zéro paramètre (P44, BCICIV-2a, 0,540/0,520 vs seuil 0,60).
+        </dcc:comment>
+
+      </dcc:statement>
+
+    </dcc:statements>
+
+  </dcc:administrativeData>
+
+  <dcc:calibrationResults>
+
+    <dcc:calibrationResult>
+      <dcc:name>Verdicts de l'audit ASH-MACH-1.0 (P43) — 7/7 avec stabilité</dcc:name>
+
+      <dcc:measurement>
+        <dcc:measuringQuantity>
+          <si:quantity>Conformité O(1) par fenêtre (temps et mémoire)</si:quantity>
+        </dcc:measuringQuantity>
+        <dcc:measuredValue>
+          <si:real>
+            <si:value>1.1</si:value>
+            <si:unit>ratio max/min du temps par fenêtre (8 s → 128 s)</si:unit>
+          </si:real>
+          <si:real>
+            <si:value>1.0</si:value>
+            <si:unit>ratio max/min de la mémoire par fenêtre</si:unit>
+          </si:real>
+        </dcc:measuredValue>
+        <dcc:uncertainty>
+          <si:expandedUnc>
+            <si:coverageFactor>1</si:coverageFactor>
+            <si:coverageInterval>[constaté, mesuré sur le noyau figé]</si:coverageInterval>
+          </si:expandedUnc>
+        </dcc:uncertainty>
+      </dcc:measurement>
+
+      <dcc:measurement>
+        <dcc:measuringQuantity>
+          <si:quantity>Invariance d'échelle des invariants normalisés
+            (Rtop, Rdyn, E1..E7) — balayage d'amplitude ×0,01 à ×100</si:quantity>
+        </dcc:measuringQuantity>
+        <dcc:measuredValue>
+          <si:real>
+            <si:value>1e-9</si:value>
+            <si:unit>écart relatif maximal mesuré</si:unit>
+          </si:real>
+        </dcc:measuredValue>
+        <dcc:uncertainty>
+          <si:expandedUnc>
+            <si:coverageFactor>1</si:coverageFactor>
+            <si:coverageInterval>[mesuré, P45-C2]</si:coverageInterval>
+          </si:expandedUnc>
+        </dcc:uncertainty>
+      </dcc:measurement>
+
+      <dcc:measurement>
+        <dcc:measuringQuantity>
+          <si:quantity>Pente d'amplitude du nombre de Reynolds noétique (ReN)</si:quantity>
+        </dcc:measuringQuantity>
+        <dcc:measuredValue>
+          <si:real>
+            <si:value>-0.996</si:value>
+            <si:unit>pente log-log mesurée (théorie −1)</si:unit>
+          </si:real>
+        </dcc:measuredValue>
+        <dcc:uncertainty>
+          <si:expandedUnc>
+            <si:coverageFactor>1</si:coverageFactor>
+            <si:coverageInterval>[mesuré, P43-C3 / P45-C2 — ReN non portable]</si:coverageInterval>
+          </si:expandedUnc>
+        </dcc:uncertainty>
+      </dcc:measurement>
+
+      <dcc:measurement>
+        <dcc:measuringQuantity>
+          <si:quantity>Stabilité Σ du verdict (PERT-BATT, plan factoriel axial)</si:quantity>
+        </dcc:measuringQuantity>
+        <dcc:measuredValue>
+          <si:real>
+            <si:value>1.00</si:value>
+            <si:unit>Σ minimale publiée sur la batterie de référence (11 protocoles)</si:unit>
+          </si:real>
+        </dcc:measuredValue>
+        <dcc:uncertainty>
+          <si:expandedUnc>
+            <si:coverageFactor>1</si:coverageFactor>
+            <si:coverageInterval>[fragilités publiées : S1 Σ=0,91 (nperseg=128) ;
+              S4 Σ=0,82 (f0=0,5, N_oct=4) — axes responsables déclarés]</si:coverageInterval>
+          </si:expandedUnc>
+        </dcc:uncertainty>
+      </dcc:measurement>
+
+      <dcc:measurement>
+        <dcc:measuringQuantity>
+          <si:quantity>Séparation sans amplitude (10/10 paires du benchmark,
+            invariants normalisés uniquement)</si:quantity>
+        </dcc:measuringQuantity>
+        <dcc:measuredValue>
+          <si:real>
+            <si:value>10</si:value>
+            <si:unit>paires séparées à intervalles inter-fenêtres disjoints</si:unit>
+          </si:real>
+        </dcc:measuredValue>
+        <dcc:uncertainty>
+          <si:expandedUnc>
+            <si:coverageFactor>1</si:coverageFactor>
+            <si:coverageInterval>[mesuré, P45-C3]</si:coverageInterval>
+          </si:expandedUnc>
+        </dcc:uncertainty>
+      </dcc:measurement>
+
+    </dcc:calibrationResult>
+
+  </dcc:calibrationResults>
+
+</dcc:digitalCalibrationCertificate>
