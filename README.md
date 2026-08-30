@@ -1,6 +1,6 @@
 # noetic-normes — Normalisation pilotée par la Machine Noétique
 
-**Dépôt privé.** Prospection des directions de normalisation de
+Prospection des directions de normalisation de
 l'écosystème Noetic Physics, régie par le protocole de la machine :
 zéro paramètre ajusté, protocoles gelés, falsifieurs exécutables,
 échecs publiés (B3-FAIL), artefacts figés SHA-256.
