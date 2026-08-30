@@ -50,7 +50,7 @@ DIRECTIONS = [
         "« verdict algorithmique » : protocole gelé, domaine mesuré, "
         "falsifieur exécutable, stabilité Σ, empreinte SHA-256 — la chaîne "
         "ASH → M̂ publiée comme un DCC étendu auto-émis et rejouable",
-        "NORM-MACH-1.0", "ouverte",
+        "NORM-MACH-1.0", "en-cours",
         "produire le cas complet (DCC étendu de la chaîne ASH → M̂, "
         "rejouable) + contact avec la communauté métrologie légale "
         "(PTB/DAkkS ou délégation française)",
@@ -59,7 +59,16 @@ DIRECTIONS = [
         "si le cas DCC étendu publié n'est rejoué par aucun tiers en six "
         "mois → la voie est réfutée telle quelle (publié) ; si le format "
         "DCC ne peut pas porter un champ verdict → publié, direction "
-        "refermée vers D2/D4"),
+        "refermée vers D2/D4",
+        addenda=[
+            {"date": "2026-08-31",
+             "action": "production livrée — cas DCC étendu auto-émis "
+                       "rédigé (champ « verdict algorithmique » dans "
+                       "<dcc:statements>, schéma DCC v3.3.0) ; contact "
+                       "métrologie légale à engager",
+             "artefacts": ["specs/dcc-etendu-ash-mach-0.1.xml"],
+             "note": "fenêtre de rejeu tiers ouverte jusqu'au 2027-02-28"},
+        ]),
     entree(
         "D2-CWA-PREUVE-EXECUTABLE", "norme",
         "CEN Workshop Agreement : « Exécutable evidence for high-risk AI "
@@ -67,14 +76,21 @@ DIRECTIONS = [
         "Act : robustesse) avant les normes harmonisées, avec le corpus "
         "comme cas de référence vivant (20 frontières, falsifieurs "
         "exécutables)",
-        "NORM-MACH-1.0", "ouverte",
+        "NORM-MACH-1.0", "en-cours",
         "rédiger la proposition d'atelier (scope, livrables, calendrier) "
         "et la déposer — ouverte à tout acteur, y compris petits",
         {"fondation": "docs/note-directions-normes.md §D2",
          "cas_de_référence": "github.com/PORTEMANN/noetic-machine-complete"},
         "si l'atelier n'aboutit pas ou si la proposition est refusée → "
         "publié tel quel (B3-FAIL du plan) ; deux refus consécutifs "
-        "ferment la voie"),
+        "ferment la voie",
+        addenda=[
+            {"date": "2026-08-31",
+             "action": "production livrée — proposition d'atelier CWA "
+                       "rédigée (scope, 3 livrables, calendrier 2027, "
+                       "parties sollicitées, IPR) ; dépôt prévu 2027-T1",
+             "artefacts": ["docs/proposition-cwa-preuve-executable.md"]},
+        ]),
     entree(
         "D3-CLAUSES-PREN", "norme",
         "Entrer dans les projets prEN CEN-CENELEC JTC 21 (délégation "
@@ -82,28 +98,44 @@ DIRECTIONS = [
         "stabilité par perturbation du protocole d'évaluation comme "
         "exigence de robustesse ; (ii) le registre de limites mesurées "
         "comme structure de la documentation annexe IV",
-        "NORM-MACH-1.0", "ouverte",
+        "NORM-MACH-1.0", "en-cours",
         "formuler les deux clauses en langage normatif + dossier de preuve "
         "(A1/A1b exécutés) + prise de contact délégation nationale",
         {"fondation": "docs/note-directions-normes.md §D3",
          "preuve": "a1_batterie_perturbation.py, a1b_batterie_retroactive.py "
                    "(corpus, verdicts figés)"},
         "si les deux clauses sont rejetées deux fois → la voie est "
-        "documentée comme fermée, pas persévérée en silence"),
+        "documentée comme fermée, pas persévérée en silence",
+        addenda=[
+            {"date": "2026-08-31",
+             "action": "production livrée — deux clauses en langage "
+                       "normatif (stabilité par perturbation ; registre "
+                       "des limites) + dossier de preuve (5 chantiers, "
+                       "66 protocoles) ; contact AFNOR à engager",
+             "artefacts": ["docs/clauses-pren-robustesse-limites.md"]},
+        ]),
     entree(
         "D4-OIML-INSTRUMENT-VERDICT", "pont",
         "Proposer à OIML/WELMEC la catégorie « instrument à verdict "
         "algorithmique » : fiche de domaine mesuré obligatoire (résolution "
         "effective, train minimal d'événements, stabilité) sur le gabarit "
         "V1–V6 du document technique ASH → M̂",
-        "NORM-MACH-1.0", "ouverte",
+        "NORM-MACH-1.0", "en-cours",
         "adapter le gabarit V1–V6 en fiche d'instrument + l'adosser au cas "
         "D1 (DCC étendu) avant de contacter OIML/WELMEC",
         {"fondation": "docs/note-directions-normes.md §D4",
          "gabarit": "doc technique chaîne ASH → M̂ (LaTeX, corpus)"},
         "si le canal exige une représentation formelle inaccessible → "
         "documenté, replis vers D1 seul ; toute objection technique est "
-        "publiée"),
+        "publiée",
+        addenda=[
+            {"date": "2026-08-31",
+             "action": "production livrée — fiche d'instrument à verdict "
+                       "algorithmique rédigée (gabarit OIML/WELMEC, "
+                       "V1–V6 + limites publiées + falsifieurs), adossée "
+                       "au cas D1",
+             "artefacts": ["specs/fiche-instrument-verdict-0.1.md"]},
+        ]),
     entree(
         "D5-SPEC-ASH-MACH", "spécification",
         "Publier la spécification ouverte ASH-MACH : les protocoles gelés "
