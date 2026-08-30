@@ -28,8 +28,8 @@ zéro paramètre ajusté, protocoles gelés, falsifieurs exécutables,
 | D2-CWA-PREUVE-EXECUTABLE | CEN Workshop Agreement : preuve exécutable art. 15 | norme | ouverte |
 | D3-CLAUSES-PREN | Deux clauses exécutées pour les prEN JTC 21 (via AFNOR) | norme | ouverte |
 | D4-OIML-INSTRUMENT-VERDICT | Catégorie « instrument à verdict algorithmique » (OIML/WELMEC) | pont | ouverte |
-| D5-SPEC-ASH-MACH | Spécification ouverte ASH-MACH auto-appliquée + safety case pilote | spécification | ouverte |
-| D6-TABLE-CONFORMITE-AIACT | Table de conformité AI Act (art. 9–15) du corpus | spécification | ouverte |
+| D5-SPEC-ASH-MACH | Spécification ouverte ASH-MACH auto-appliquée + safety case pilote | spécification | **en-cours** — produite (`specs/ash-mach-0.1.md`), fenêtre de rejeu tiers ouverte jusqu'au 2027-02-28 |
+| D6-TABLE-CONFORMITE-AIACT | Table de conformité AI Act (art. 9–15) du corpus | spécification | **fermée** — produite (`docs/table-conformite-ai-act.md`), écarts suivis en addenda |
 
 Registre machine-lisible : `data/n1_registre_normes.json` (régénéré par
 `src/n1_registre_normes.py` — empreintes par entrée + globale).
@@ -39,6 +39,10 @@ Registre machine-lisible : `data/n1_registre_normes.json` (régénéré par
 - `docs/note-directions-normes.md` — la note stratégique (six directions,
   séquence, falsifieurs du plan) issue de la recherche multi-agents du
   31/08/2026 (12 dimensions, ~300 requêtes).
+- `specs/ash-mach-0.1.md` — la spécification ouverte : exigences SHALL,
+  essais rejouables, falsifieurs, safety case pilote exécuté.
+- `docs/table-conformite-ai-act.md` — la table de conformité AI Act
+  (art. 9–15) avec écarts publiés.
 - Corpus de référence : `noetic-machine-complete` (P0–P45, série A,
   série M, registre A4 de 20 frontières).
 - Instrument audité : `noetic-ash` v1.1.0.
