@@ -16,6 +16,10 @@ le registre, jamais effacé.
 Statuts : ouverte · en-cours · partielle · fermée · réfutée (publiée).
 Types : norme (canal normatif externe) · spécification (auto-appliquée) ·
 pont (canal technique existant à étendre).
+
+Règle addenda : les champs d'origine d'une entrée (énoncé, coût,
+falsifieur) ne sont jamais réécrits ; les mises à jour prennent la forme
+d'addenda datés chaînés dans le champ « addenda ».
 """
 
 import hashlib
@@ -26,11 +30,14 @@ TYPES = {"norme", "spécification", "pont"}
 STATUTS = {"ouverte", "en-cours", "partielle", "fermée", "réfutée"}
 
 
-def entree(id_, type_, enonce, protocole, statut, cout, artefacts, falsifieur):
+def entree(id_, type_, enonce, protocole, statut, cout, artefacts,
+           falsifieur, addenda=None):
     assert type_ in TYPES and statut in STATUTS
     e = {"id": id_, "type": type_, "énoncé": enonce, "protocole": protocole,
          "statut": statut, "coût_de_fermeture_exact": cout,
          "artefacts": artefacts, "falsifieur": falsifieur}
+    if addenda:
+        e["addenda"] = addenda
     blob = json.dumps(e, ensure_ascii=False, sort_keys=True).encode()
     e["sha256_entrée"] = hashlib.sha256(blob).hexdigest()
     return e
@@ -103,13 +110,23 @@ DIRECTIONS = [
         "du corpus présentés comme une mini-norme (définitions, conditions "
         "de validité, essais, falsifieurs, format de registre) + safety "
         "case pilote avec certificat de minimalité calculé (forme M2e)",
-        "NORM-MACH-1.0", "ouverte",
+        "NORM-MACH-1.0", "en-cours",
         "rédiger la spécification (format norme : exigences SHALL, essais "
         "rejouables) + exécuter le safety case pilote de bout en bout",
         {"fondation": "docs/note-directions-normes.md §D5",
          "certificat_modèle": "m2e_copie_tri_verdict.json (corpus)"},
         "si la spécification publiée n'est rejouée par personne en six "
-        "mois → la voie D5 est réfutée telle quelle (publié)"),
+        "mois → la voie D5 est réfutée telle quelle (publié)",
+        addenda=[
+            {"date": "2026-08-31",
+             "action": "production livrée — spécification rédigée au "
+                       "format norme + safety case pilote exécuté "
+                       "(certificat de minimalité de la copie)",
+             "artefacts": ["specs/ash-mach-0.1.md"],
+             "note": "fenêtre de rejeu par des tiers ouverte jusqu'au "
+                     "2027-02-28 — le falsifieur reste armé : aucune "
+                     "rejouabilité tierce sous six mois réfute la voie"},
+        ]),
     entree(
         "D6-TABLE-CONFORMITE-AIACT", "spécification",
         "Publier la table de conformité AI Act du corpus : artefacts "
@@ -117,14 +134,21 @@ DIRECTIONS = [
         "risques ; D figées = gouvernance des données ; notes SHA = "
         "documentation ; PERT-BATT = robustesse ; le verdict qui refuse "
         "quand Σ chute = supervision humaine effective)",
-        "NORM-MACH-1.0", "ouverte",
+        "NORM-MACH-1.0", "fermée",
         "produire la table article par article, avec pour chacun "
         "l'artefact du corpus qui le couvre et les écarts publiés",
         {"fondation": "docs/note-directions-normes.md §D6",
          "cadre": "règlement (UE) 2024/1689 modifié par (UE) 2026/1744"},
         "tout écart découvert entre la table et les exigences finales des "
         "normes harmonisées est publié en addendum — jamais corrigé en "
-        "silence"),
+        "silence",
+        addenda=[
+            {"date": "2026-08-31",
+             "action": "production livrée — table v1.0 art. 9–15 avec "
+                       "écarts publiés (QMS, plan de surveillance, "
+                       "procédure de supervision humaine)",
+             "artefacts": ["docs/table-conformite-ai-act.md"]},
+        ]),
 ]
 
 
