@@ -3,8 +3,8 @@
 # note : docs/note-directions-normes.docx (binaire) livré hors dépôt
 
 fe7144543d924bc9ed8143a6f53344ba187fefe61877971f69f33467c6b2ca19  README.md
-12d1a4af46c01ada544af8c4d69fa2b7c3a92bf68471d476b5ebf30d94f9f47f  src/n1_registre_normes.py
-ac5a3f530d50323a69f63aaf1e0b682346a9c2065ffe46d54d69ee498ddc5391  data/n1_registre_normes.json
+c554a8a451f625523fcf7a63621c83fd3ac2f69aaecd37c677c1d118ca5ccb1b   src/n1_registre_normes.py
+fb4bf97f787d8d90239ed1794815674b6c222c1e2219547f65ccc92a60cbf7ff   data/n1_registre_normes.json
 8514ac9e1b4946ab45bc74705fbf66bed107987ae77270599dc0395b7c48e22f  docs/note-directions-normes.md
 b36f9869104bd676a2a8ff9aaf209ba12b2519ee8ea38de85460390ae2aa25de  specs/ash-mach-0.1.md
 12cbb985563dd66350a16491f9663450b2260670b49d6b4e9d9b5ccbcd5cdeff  specs/dcc-etendu-ash-mach-0.1.xml
@@ -12,3 +12,6 @@ ac310889f53a3cdd59f1ec11bf16a41f53b60d6cafb26a1d38a5075774f57cf3  specs/fiche-in
 7a6e1e86d092b2c534a3385a16050821736cf863798e44f1fc95c4419ed57569  docs/table-conformite-ai-act.md
 f44cc544eab3d7f272fd1bfdeb2ce43a5aace46b9b985986277e93b0772bfcb6  docs/proposition-cwa-preuve-executable.md
 0db1c860f5a914bf55887c30593302484f133235a0f756a52eabc898a134a007  docs/clauses-pren-robustesse-limites.md
+6249c92c504aa93f5af78a68e0c59c6f3966f277f40d05a5a4e263b75cef9865  correspondance/courrier-d1-d4-metrologie-legale.md
+39fc7d097521470610236711117de69b84ac0382a52461ced23274bebeecc792  correspondance/proposition-formelle-cwa-d2.md
+f680a2f861fc98438ecd23fd6c8c8ffa3cf580dc94e3424354a3284a684b9916  correspondance/soumission-clauses-d3-afnor.md
