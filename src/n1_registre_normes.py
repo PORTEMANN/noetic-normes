@@ -68,6 +68,10 @@ DIRECTIONS = [
                        "métrologie légale à engager",
              "artefacts": ["specs/dcc-etendu-ash-mach-0.1.xml"],
              "note": "fenêtre de rejeu tiers ouverte jusqu'au 2027-02-28"},
+            {"date": "2026-08-31",
+             "action": "version formelle prête à envoyer — courrier à la "
+                       "métrologie légale (PTB/DAkkS/LNE) rédigé",
+             "artefacts": ["correspondance/courrier-d1-d4-metrologie-legale.md"]},
         ]),
     entree(
         "D2-CWA-PREUVE-EXECUTABLE", "norme",
@@ -90,6 +94,10 @@ DIRECTIONS = [
                        "rédigée (scope, 3 livrables, calendrier 2027, "
                        "parties sollicitées, IPR) ; dépôt prévu 2027-T1",
              "artefacts": ["docs/proposition-cwa-preuve-executable.md"]},
+            {"date": "2026-08-31",
+             "action": "version formelle prête à déposer — formulaire CWA "
+                       "complet v1.0 rédigé",
+             "artefacts": ["correspondance/proposition-formelle-cwa-d2.md"]},
         ]),
     entree(
         "D3-CLAUSES-PREN", "norme",
@@ -113,6 +121,11 @@ DIRECTIONS = [
                        "des limites) + dossier de preuve (5 chantiers, "
                        "66 protocoles) ; contact AFNOR à engager",
              "artefacts": ["docs/clauses-pren-robustesse-limites.md"]},
+            {"date": "2026-08-31",
+             "action": "version formelle prête à envoyer — soumission "
+                       "AFNOR rédigée (les deux clauses + demande + "
+                       "annexes)",
+             "artefacts": ["correspondance/soumission-clauses-d3-afnor.md"]},
         ]),
     entree(
         "D4-OIML-INSTRUMENT-VERDICT", "pont",
