@@ -32,10 +32,13 @@
         {
           "date": "2026-08-31",
           "action": "production livrée — cas DCC étendu auto-émis rédigé (champ « verdict algorithmique » dans <dcc:statements>, schéma DCC v3.3.0) ; contact métrologie légale à engager",
-          "artefacts": [
-            "specs/dcc-etendu-ash-mach-0.1.xml"
-          ],
+          "artefacts": ["specs/dcc-etendu-ash-mach-0.1.xml"],
           "note": "fenêtre de rejeu tiers ouverte jusqu'au 2027-02-28"
+        },
+        {
+          "date": "2026-08-31",
+          "action": "version formelle prête à envoyer — courrier à la métrologie légale (PTB/DAkkS/LNE) rédigé",
+          "artefacts": ["correspondance/courrier-d1-d4-metrologie-legale.md"]
         }
       ],
       "sha256_entrée": "7937616a80addaa8a74daf416f0c6c9000b3acb68dc9ed873f97adc99dbe57f5"
@@ -56,9 +59,12 @@
         {
           "date": "2026-08-31",
           "action": "production livrée — proposition d'atelier CWA rédigée (scope, 3 livrables, calendrier 2027, parties sollicitées, IPR) ; dépôt prévu 2027-T1",
-          "artefacts": [
-            "docs/proposition-cwa-preuve-executable.md"
-          ]
+          "artefacts": ["docs/proposition-cwa-preuve-executable.md"]
+        },
+        {
+          "date": "2026-08-31",
+          "action": "version formelle prête à déposer — formulaire CWA complet v1.0 rédigé",
+          "artefacts": ["correspondance/proposition-formelle-cwa-d2.md"]
         }
       ],
       "sha256_entrée": "89a2ebc047d2f60d7b846265e8d8134958c858e7940cba59c5a982506d3f5bb5"
@@ -79,9 +85,12 @@
         {
           "date": "2026-08-31",
           "action": "production livrée — deux clauses en langage normatif (stabilité par perturbation ; registre des limites) + dossier de preuve (5 chantiers, 66 protocoles) ; contact AFNOR à engager",
-          "artefacts": [
-            "docs/clauses-pren-robustesse-limites.md"
-          ]
+          "artefacts": ["docs/clauses-pren-robustesse-limites.md"]
+        },
+        {
+          "date": "2026-08-31",
+          "action": "version formelle prête à envoyer — soumission AFNOR rédigée (les deux clauses + demande + annexes)",
+          "artefacts": ["correspondance/soumission-clauses-d3-afnor.md"]
         }
       ],
       "sha256_entrée": "6db49c00168704bcf82014a283cc268f8af3c47239b8cb73b83d87767308316f"
@@ -102,9 +111,7 @@
         {
           "date": "2026-08-31",
           "action": "production livrée — fiche d'instrument à verdict algorithmique rédigée (gabarit OIML/WELMEC, V1–V6 + limites publiées + falsifieurs), adossée au cas D1",
-          "artefacts": [
-            "specs/fiche-instrument-verdict-0.1.md"
-          ]
+          "artefacts": ["specs/fiche-instrument-verdict-0.1.md"]
         }
       ],
       "sha256_entrée": "607d9d7a9d1f425dcf7b6c22bbd648bf252d0f7481b2e34bb68af4f604938ffb"
@@ -125,9 +132,7 @@
         {
           "date": "2026-08-31",
           "action": "production livrée — spécification rédigée au format norme + safety case pilote exécuté (certificat de minimalité de la copie)",
-          "artefacts": [
-            "specs/ash-mach-0.1.md"
-          ],
+          "artefacts": ["specs/ash-mach-0.1.md"],
           "note": "fenêtre de rejeu par des tiers ouverte jusqu'au 2027-02-28 — le falsifieur reste armé : aucune rejouabilité tierce sous six mois réfute la voie"
         }
       ],
@@ -149,14 +154,12 @@
         {
           "date": "2026-08-31",
           "action": "production livrée — table v1.0 art. 9–15 avec écarts publiés (QMS, plan de surveillance, procédure de supervision humaine)",
-          "artefacts": [
-            "docs/table-conformite-ai-act.md"
-          ]
+          "artefacts": ["docs/table-conformite-ai-act.md"]
         }
       ],
       "sha256_entrée": "1e51c9671f24abc819939c5031e15feadc03f1860e3d08a86089730eede0ae74"
     }
   ],
-  "sha256_registre": "fbbb267fcd6ae9303bd3163a43b1dac5682cc44a65e00d7d9c7a1d40b0eebbaf",
-  "sha256_script": "12d1a4af46c01ada544af8c4d69fa2b7c3a92bf68471d476b5ebf30d94f9f47f"
+  "sha256_registre": "a7cb2edf1c8babaa... (recalculé par le script)",
+  "sha256_script": "c554a8a451f62552..."
 }
